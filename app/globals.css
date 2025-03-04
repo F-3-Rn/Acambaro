@@ -5,20 +5,45 @@
   --font-mono: var(--font-geist-mono);
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+	/* Variables de colores para degradados */
+	:root {
+		--primary-color: #00c6ff;
+		/* Degradado azul brillante */
+		--secondary-color: #0072ff;
+		/* Color de transición al azul */
+		--tertiary-color: #7eb8ff;
+		/* Color de transición al azul */
+		--background-color-light: #f7f7f7;
+		/* Fondo claro */
+		--background-color-dark: #181818;
+		/* Fondo oscuro */
+		--text-color-light: #333;
+
+		--text-color-dark: #f0f0f0;
+	}
+
+	.pri-sec {
+		background: linear-gradient(to right,
+				var(--primary-color),
+				var(--secondary-color));
+	}
+
+	.pri-ter {
+		background: linear-gradient(to right,
+				var(--primary-color),
+				var(--tertiary-color));
+	}
+
+	.btn-login:hover {
+		background: linear-gradient(to right,
+				var(--tertiary-color),
+				var(--primary-color));
+	}
+
+	.blue {
+		color: #007bff;
+	}
